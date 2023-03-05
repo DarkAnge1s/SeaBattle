@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="style1.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+<div id='root' class = 'root'>
+    <div class = 'NameGame'>Морской бой</div>
+    <button id='button_to_play_with_the_bot' class = 'fight fightBot'>Бой с ИИ</button>
+    <button id='button_to_play_with_a_friend' class = 'fight'>Бой с другом</button>
+</div>
+<div class = 'preparation'>
+    <div class = 'batlleField' id = 'batlleField'></div>
+</div>
+<script src = 'mouse.js'></script>
+<script src = 'helpFunction.js'></script>
+<script src = 'field.js'></script>
+<script>
+    const root = document.getElementById('root')
+    const batleField = document.getElementById('batlleField')
+        const button_to_play_with_the_bot = document.getElementById('button_to_play_with_the_bot')
+        const button_to_play_with_a_friend = document.getElementById('button_to_play_with_a_friend')
+        function foo(){
+            root.remove()
+            const matrix = createMatrix()
+        }
+        function createMatrix(){
+        const matrix = [];
+        for(let i = 0;i < 10;i++){
+            const element = []
+            for(let y = 0;y < 10;y++){
+                const field = new Field(y,i);
+                field.createDiv(batleField,y,i )
+                batleField.append(field.div)
+                element.push(field)
+            }
+            matrix.push(element)
+        }
+        return matrix
+    }
+        function foo_two(){
+            root.remove()
+        }
+        button_to_play_with_the_bot.addEventListener('click',foo)
+        button_to_play_with_a_friend.addEventListener('click',foo_two)
+</script>
+    </body>
+</html>
