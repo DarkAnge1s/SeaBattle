@@ -1,0 +1,226 @@
+*{
+    margin : 0;
+    padding : 0;
+    user-select: none;  
+}
+.body{
+    height: 100vw;
+    height: 100vh;
+}
+.fightBot{
+    align-self:flex-end;
+}
+.fight{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+}
+.root{
+    width:800px;
+    height: 800px;
+    position: relative;
+    left: 250px;
+    display:grid;
+    justify-items: center;
+    grid-template-rows: 102px 300px 1fr;
+}
+.NameGame{
+    font-size: 102px;
+}
+.batlleField-player{
+    position: absolute;
+    top:200px;
+    left:200px;
+}
+.batlleField-opponent{
+    position: absolute;
+    top:200px;
+    left:900px;
+}
+.batlleField-table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.batlleField-item{
+    position:  relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid  rgb(32, 12, 97)
+}
+.marker{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size:25px;
+}
+.marker-row{
+    left: -35px;
+}
+.marker-coluwn{
+    top: -35px;
+}
+.ship{
+    position: absolute;
+    top:0;
+    left:0;
+    margin: -3px;
+    border: 3px solid #0400ff;
+    background-color: rgba(0,55,255,0.45);
+    width: 40px;
+    height: 40px;
+}
+
+.ship-row-1{
+
+}
+.ship-row-2{
+    width: 81px;
+}
+.ship-row-3{
+    width: 122px;
+}
+.ship-row-4{
+    width: 163px;
+}
+.ship-coluwn-1{
+    
+}
+.ship-coluwn-2{
+    height: 80px;
+}
+.ship-coluwn-3{
+    height: 120px;
+}
+.ship-coluwn-4{
+    height: 163px;
+}
+.shot{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.shot-missed{
+    color:black;
+}
+.shot-wounded{
+    background-color: #fbdede;
+    z-index: 1;
+}
+.shot-wounded::after{
+    content:' ';
+    width: calc(40px*1.3);
+    height: calc(40px*1.3);
+    border-top:2px solid red;
+    position: absolute;
+    z-index:-1;
+    transform: rotate(45deg);
+    left:-25px;   
+    top: 11px;
+}
+.shot-wounded::before{
+    content:' ';
+    width: calc(40px*1.3);
+    height: calc(40px*1.3);
+    border-top:2px solid red;
+    position: absolute;
+    z-index:-1;
+    transform: rotate(-45deg);
+    left: 11px;   
+    top: 11px;
+}
+.shot-killed{
+    margin: -3px;
+    border: 3px solid red;
+}
+.button_Random_ships{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    left:720px;
+    top:560px;
+}
+.button_Manually_ships{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    left:900px;
+    top:560px;
+}
+.button_Complete_ships{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    left:810px;
+    top:610px;
+}
+.batlleField-item_active{
+    background-color: rgba(88, 170, 228, 0.444);
+}
+.button_end{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    left:675px;
+    top:535px;
+}
+.hidden{
+    display: none;
+}
+.text_gameUp{
+    font-size: 50px;
+    position: absolute;
+    left:510px;
+    top:700px;
+}
+.title_loser{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    left:675px;
+    top:225px;
+    font-size:25px;
+}
+.button_exit{
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    left:675px;
+    top:575px;
+}
+.text_playerss{
+    font-size: 50px;
+    position: absolute;
+    left:510px;
+    top:50px;
+}
+.text_field_opponent{
+    font-size: 25px;
+    position: absolute;
+    left:1020px;
+    top:50px;
+}
+.text_field_player{
+    font-size: 25px;
+    position: absolute;
+    left:330px;
+    top:50px;
+}
+
+
+
